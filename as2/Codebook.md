@@ -2,8 +2,8 @@ This tidy dataset corresponds to the average of each variable for each activity 
 
 Variables in the dataset:
   - Subject: an integer subject ID, from 1 to 30.
-  -  Activity: an string activity name upon 6: Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying.
-  -  The rest of variables correspond to the mean of a measurement for each subject and activity.
+  - Activity: an string activity name upon. Such activities are: Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, Laying.
+  - The rest of variables correspond to the mean of a measurement for each subject and activity.
     
 The script run_analysis.R:
   - Takes a directory path as variable
