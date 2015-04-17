@@ -6,9 +6,10 @@ Variables in the dataset:
     The rest of variables correspond to the mean of a measurement for each subject and activity.
     
 The script run_analysis.R:
-  - Reads the previously downloaded UCI_HAR_Dataset data from the working directory
+  - Takes a directory path as variable
+  - Reads the previously downloaded UCI_HAR_Dataset data from this directory
   - Merges the training and the test sets to create one data set
   - Adds columns corresponding to activity and subject information for both datasets
-  - Labels the dataset columns with the appropiate variable name
+  - Labels the dataset columns with the appropiates variables names
   - Extracts the columns corresponding to measurements on the mean and standard deviation
   - Creates a tidy data set with the average of each variable for each activity and each subject.
