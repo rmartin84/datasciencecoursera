@@ -2,10 +2,6 @@ run_analysis <- function(directory = "C:\\Users\\Downloads\\rprog_data_ProgAssig
   
   setwd(directory)
 
-  # set up activityLabels as a data.table, so that we can look up the activityName by using the classLabel
-  activityLabels = data.table(activityLabels)
-  setkey(activityLabels, classLabel)
-  
 ##Read Data 
 #Create a features vector
 feat <- read.table(".\\features.txt")
@@ -71,6 +67,5 @@ library(data.table)
 Dataset_mean_and_std_dt = data.table(Dataset_mean_and_std)
 setkey(Dataset_mean_and_std_dt,Activity, Subject)
 Tidy_data_set = Dataset_mean_and_std_dt[,lapply(.SD,mean), by = .(Activity,Subject)]
-write.table(Tidy_data_set, "By_Activity_and_Subject_average.txt", row.name = F)
-
+write.table(Tidy_data_set, "Tidy_data_set.txt", row.name = F)
 }
