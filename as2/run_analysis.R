@@ -7,11 +7,6 @@ run_analysis <- function(directory = "C:\\Users\\Downloads\\rprog_data_ProgAssig
 feat <- read.table(".\\features.txt")
 features <- as.vector(feat[,2])
 
-#Read activity labels
-ActivityLabels = read.table("./activity_labels.txt", stringsAsFactors = F)
-head(ActivityLabels)
-colnames(ActivityLabels) = c("Label","ActivityName")
-
 #Read training data and create a dataset including subjects and activities information
 datTrain <- read.table(".\\train\\X_train.txt")
 activitiesTrain <- read.table(".\\train\\Y_train.txt")
